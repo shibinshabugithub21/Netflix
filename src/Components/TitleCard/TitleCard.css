@@ -1,0 +1,96 @@
+.titlecards {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #000;
+}
+
+.titlecards h2 {
+    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+}
+
+.card-list {
+    background-color: #000;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: calc(100% - 40px);
+    height: 300px;
+}
+
+.card-list::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    display: inline-block;
+    width: 320px;
+    height: 300px;
+    margin-right: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+    filter: brightness(1.1) contrast(1.2) saturate(1.3);
+}
+
+.card p {
+    margin: 0;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card:hover img {
+    filter: brightness(1.2) contrast(1.3) saturate(1.4);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 80vw;
+        height: auto;
+        margin-right: 15px;
+    }
+
+    .titlecards {
+        padding: 10px;
+    }
+
+    .titlecards h2 {
+        font-size: 24px;
+    }
+
+    .card p {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
